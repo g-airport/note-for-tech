@@ -1,7 +1,2 @@
-# Document
-##Golang
-(主要用到micro http metadata)\
-1.metadata 用来http.Requset ---> context.Context \
-2.Http请求RPC \
-3.错误封装
-
+#Golang技术文档分享
+## 希望多多指教！！！
