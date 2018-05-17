@@ -1,0 +1,7 @@
+{
+  "api_host": "0.0.0.0:8080",
+  "api_allowed_origins": [
+    "http://localhost:12346",
+    "http://localhost:8061"
+  ]
+}
