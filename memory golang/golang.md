@@ -10,7 +10,7 @@ package memory
  Golang 内存结构 \
  MHeap MCentral MCache \
  1.MHeap 分配堆 适用场景 申请大块内存 为下层 MCentral MCache 提供内存服务 \
- 基本单位 : MSpan(若干恋雪内存的数据结构)
+ 基本单位 : MSpan(若干连续内存页的数据结构 \
  MSpan 双端链表 \
  type MSpan struct { \
   	MSpan   *next \
