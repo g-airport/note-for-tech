@@ -1,4 +1,4 @@
-package memory
+memory
 
 使用 pprof 来检测内存泄漏 \
 内存泄漏一般发生在 堆 
