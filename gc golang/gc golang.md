@@ -17,6 +17,7 @@
 
 ###### 三色标记法:GC中用三种颜色标记不同的对象
 
+```
 (1)黑色:本身强引用,并已处理对象中的子引用
 
 (2)灰色:本身强引用,还没处理对象中的子引用
@@ -24,7 +25,7 @@
 (3)白色:不可达对象
 
 Mark扫描时根据状态进行标记(缓解性能问题)
-
+```
 3.分代收集(generation)
 
 &emsp;&emsp;将堆划分为两个或多个称为代（generation）的空间 \
@@ -32,11 +33,12 @@ Mark扫描时根据状态进行标记(缓解性能问题)
 随着垃圾回收的重复执行，生命周期较长的对象会被提升（promotion）到老年代中（分类思路）
 
 ### Tips
+```
 1. `减少对象分配`
 
 1. `func(r *Reader) Read() ([]byte, error)` 
 2. `func(r *Reader) Read(buf []byte) (int, error)`
-
+```
 第一个函数没有形参，每次调用的时候返回一个[]byte \
 第二个函数在每次调用的时候，形参是一个buf []byte 类型的对象，之后返回读入的byte的数目
 
@@ -44,11 +46,11 @@ Mark扫描时根据状态进行标记(缓解性能问题)
  第二个函数在每次迪调用的时候 会重用形参声明)
  
 2. `string 与 []byte 转换`
-
+```
 1. `type = struct []uint8 {    uint8 *array;    int len;    int cap;}`
 
 2. `type = struct string {    uint8 *str;    int len;}`
-
+```
 解决策略: \
 &emsp;&emsp;一种方式是一直使用[]byte 特别是在数据传输方面 \
 []byte中也包含着许多string会常用到的有效的操作 \
@@ -57,14 +59,14 @@ Mark扫描时根据状态进行标记(缓解性能问题)
 优化策略:主要是使用unsafe.Pointer直接进行转化
 
 3. `+ string 操作`
- 
+```
 &emsp;&emsp;由于采用+来进行string的连接会生成新的对象，降低gc的效率，最好采用方式是通过append函数来进行
 
 弊端：`b := make([]int, 1024)   b = append(b, 99)`  
       `fmt.Println("len:", len(b), "cap:", cap(b))` 
       
 &emsp;&emsp;append操作之后，数组的空间由1024增长到了1312 
-
+```
 ###### 避免这种情况发生: 最初分配空间的时候完成好空间规划操作
 
 

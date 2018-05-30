@@ -11,6 +11,7 @@ memory
  MHeap MCentral MCache \
  1.MHeap 分配堆 适用场景 申请大块内存 为下层 MCentral MCache 提供内存服务 \
  基本单位 : MSpan(若干连续内存页的数据结构 \
+ ```
  MSpan 双端链表 \
  type MSpan struct { \
   	MSpan   *next \
@@ -18,13 +19,14 @@ memory
   	PageId  start  //起始页号 \
   	unitptr npages //页数 \
  } 
- 
+ ```
 2. MCache 运行分配池 每个线程都有自己的局部内存缓存MCache（局部） \
 实现goroutine高并发的重要因素 分配小对象可直接从MCache中分配 不用加锁 提升了并发效
 
 3. MCentral:作为MHeap和MCache的承上启下的连接 \
    承上:MHeap申请MSpan \ 
    启下:MSpan划分为各种大小的对象------>MCache使用 \
+```
    type MCentral struct { \
 		lock mutex;        //因为会有多个 P 过来竞争 \
 		sizeClass int32; \
@@ -33,12 +35,13 @@ memory
 		int32 nfree; \
 		…… \
  	} 
-
+```
+```
 	type mSpanList struct { \
 		first *mSpan \
 		last  *mSpan \
 	} 
-
+```
 分配流程 \
 1.object size > 32K 则使用 mheap 直接分配 
 
