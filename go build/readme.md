@@ -25,26 +25,43 @@ consul agent -dev -server -client 0.0.0.0
 ```
 
 #### Docker 步骤
-1. ```mkdir docker```
-2. ```touch Dockerfile```
-3. ```touch docker-entrypoint.sh```
-4. ```chmod +x docker-entrypoint.sh```
+1. 创建目录
+
+```
+mkdir docker
+```
+
+2. 创建Dockerfile 
+
+```
+touch Dockerfile
+```
+3. 创建docker脚本
+
+```
+touch docker-entrypoint.sh
+```
+4. 赋予脚本权限
+
+```
+chmod +x docker-entrypoint.sh
+```
 
 `Dockerfile`
 
 ```
-FROM ip_address/library/golang-runtime:latest       //选择仓库地址 + golang运行runtime版本 
+    FROM ip_address/library/golang-runtime:latest       //选择仓库地址 + golang运行runtime版本  
 
-ARG ARG_PROJECT_NAME=project-srv                    //项目名称
+    ARG ARG_PROJECT_NAME=project-srv                    //项目名称 
 
-ENV PROJECT_NAME=${ARG_PROJECT_NAME}
-ENV CONSUL_HTTP_ADDR="consul_address"               //注册地址 运行时要注册的地址
-ENV SERVER_ADDR=":0"
+    ENV PROJECT_NAME=${ARG_PROJECT_NAME} \
+    ENV CONSUL_HTTP_ADDR="consul_address"               //注册地址 运行时要注册的地址 \
+    ENV SERVER_ADDR=":0" 
+    
+    COPY docker/${PROJECT_NAME} /catagory               //项目构建目录 \
+    COPY docker/docker-entrypoint.sh /usr/local/bin/    //$GOROOT
 
-COPY docker/${PROJECT_NAME} /catagory               //项目构建目录
-COPY docker/docker-entrypoint.sh /usr/local/bin/    //$GOROOT
-
-ENTRYPOINT ["docker-entrypoint.sh"]
+    ENTRYPOINT ["docker-entrypoint.sh"]
 
 ```
 
@@ -63,16 +80,30 @@ exec "${PROJECT_NAME}" --registry=consul --registry_address=${CONSUL_HTTP_ADDR} 
 
 
 #### push Docker仓库
-1  ```docker login [repo address]```                              //输入账号密码 (同github)
+1. 输入账号密码 (同github) 
 
-2. ```docker pull [repo address]/library/golang-runtime:latest``` //build docker image 前 , pull golang runtime version (对于第一次构建docker镜像)
+ ```
+ docker login [repo address]
+ ```                           
 
-3. ```docker build --build-arg ARG_PROJECT_NAME=[binary file] -t [repo address]/deploy/[binary file]:v1.0.0.0 ./``` //binary 是./docker 目录下的 二进制文件 \
-ARG_PROJECT_NAME 是 Dockerfile 的 PROJECT_NAME
+2. build docker image 前 , pull golang runtime version (对于第一次构建docker镜像) 
 
-4 ```docker push [repo address]/eploy/[binary file]:v1.0.0.0```   //push 时可以指定tag
+```
+docker pull [repo address]/library/golang-runtime:latest
+``` 
+
+3. binary 是./docker 目录下的 二进制文件 ARG_PROJECT_NAME 是 Dockerfile 的 PROJECT_NAME 
+
+```
+docker build --build-arg ARG_PROJECT_NAME=[binary file] -t [repo address]/deploy/[binary file]:v1.0.0.0 ./
+```  
+
+4. push 时可以指定tag 
+
+```
+docker push [repo address]/eploy/[binary file]:v1.0.0.0
+``` 
 
 ###### push 完成
 
-`以上操作是把 项目 放到docker 仓库`
-`具体运行步骤 要在 portainer.io 待续 、、、`
+`以上操作是把 项目 放到docker 仓库->具体运行步骤 要在 portainer.io 待续 、、、`
