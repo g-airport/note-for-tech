@@ -101,7 +101,7 @@ docker build --build-arg ARG_PROJECT_NAME=[binary file] -t [repo address]/deploy
 4. push 时可以指定tag 
 
 ```
-docker push [repo address]/eploy/[binary file]:v1.0.0.0
+docker push [repo address]/deploy/[binary file]:v1.0.0.0
 ``` 
 
 ###### push 完成
