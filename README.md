@@ -24,3 +24,8 @@
 
 ## Mon Jan 14 2019 
 `golang 构建` [Golang Build AWS ECR](https://github.com/onlyLeoll/Document/blob/master/Golang%20AWS%20CodeBuild/Push%20ECR/push.md)
+
+## Wed Jan 16 2019
+`makefile` []()
+
+`Dockfile` []()
