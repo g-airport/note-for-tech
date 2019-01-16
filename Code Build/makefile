@@ -26,7 +26,7 @@ publish:build
 
 # Docker Repo Info
 auth-info
-    echo $(REPO_USER)
+	echo $(REPO_USER)
 	echo $(REPO_PASS)
 	echo $(REPO_URL)
 
