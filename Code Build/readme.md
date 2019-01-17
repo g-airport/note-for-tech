@@ -1,7 +1,7 @@
-##Chapter 1 : makefile
+## Chapter 1 : makefile
 
 
-####项目一般结构
+#### 项目一般结构
 
 
 - ./src 项目源码
@@ -29,4 +29,4 @@ BUILD_VERSION = ${BUILD} -ldflags "-X $(VERSION_NAMESPACE).repository=$(REPO) -X
 - REPO_PASS=xxx
 - REPO_URL=xxx
 
-##Chapter 2 : Dockerfile
+## Chapter 2 : Dockerfile
