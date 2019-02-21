@@ -38,4 +38,4 @@
 
 `Golang Server BenchMark` [Benchmark](https://github.com/onlyLeoll/Document/blob/master/ServerBenchmark/ENG-ServerBenchMark.pdf)
 
-`Go Modules Practice` [Go Modules]()
+`Go Modules Practice` [Go Modules](https://github.com/onlyLeoll/Document/blob/master/GOMOD/ENG-GolangLibsDep.pdf)
