@@ -25,7 +25,7 @@ publish:build
 	docker login -u $(REPO_USER) -p $(REPO_PASS) $(REPO_URL) && docker push $(REPO_URL)$(PROJECT_NAME):$(CURRENT_VERSION)
 
 # Docker Repo Info
-auth-info
+auth-info:
 	echo $(REPO_USER)
 	echo $(REPO_PASS)
 	echo $(REPO_URL)
