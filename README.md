@@ -34,7 +34,7 @@
 
 `Restful API` [Restful API](https://github.com/onlyLeoll/Document/tree/master/Restful.API)
 
-`Translate SDK Compare` [Translate SDK Intro]()
+`Translate SDK Compare` [Translate SDK Intro](https://github.com/onlyLeoll/Document/blob/master/GoogleTranslate/ENG-GoogleTranslateService.pdf)
 
 `Golang Server BenchMark` [Benchmark]()
 
