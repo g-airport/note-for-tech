@@ -1,0 +1,72 @@
+#Client PORT
+port = 4222
+
+#HTTP monitoring port
+monitor_port = 4223
+
+#User
+authorization {
+  users = [
+  {
+    user: "",
+    password: ""
+  }
+]
+    timeout:  1
+}
+
+#Cluster
+cluster {
+  host: '127.0.0.1'  # Host Addr
+  port: 4244         # router input stack (inbound) port
+
+#router auth @ref User
+
+# Routes are actively solicited and connected to from this server.
+# Other servers can connect to us if they supply the correct credentials
+# in their routes definitions from above.
+  routes = [
+  nats-route://user1:passwd1@127.0.0.1:4245
+  nats-route://user2:passwd2@127.0.0.1:4246
+]
+}
+
+#log option
+debug:   false
+trace:   true
+logtime: false
+log_file: "/tmp/gnatsd.log"
+
+# PID file
+pid_file: "/tmp/gnatsd.pid"
+
+
+
+#client mas conns
+max_connections: 100
+
+#maximum protocol control line
+max_control_line: 512
+
+#max valid payload
+max_payload: 65536
+
+#Slow consumption threshold
+max_pending_size: 10000000
+
+//nats stream
+streaming {
+    id: stan-cluster
+    store: file
+    dir: store
+    nats_server_url: "cluster address"
+# cluster name and node name , make auto found
+    cluster {
+    node_id: "stan-1"
+    peers: ["stan-2", "stan-3"]
+  }
+}
+
+# Duration the server can block on a socket write to a client.  Exceeding the
+# deadline will designate a client as a slow consumer.
+write_deadline: "2s"
