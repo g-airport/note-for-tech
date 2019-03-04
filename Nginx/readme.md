@@ -1,6 +1,6 @@
 ## About Nginx
 
-###Base
+### Base
 
 #### Intro
 
