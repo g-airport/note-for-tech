@@ -1,5 +1,5 @@
 
-###DNS RR (Resource Records)
+### DNS RR (Resource Records)
 ---
 - **owner** 
 
