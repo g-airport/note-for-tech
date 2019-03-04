@@ -1,4 +1,4 @@
-# Golang技术文档分享
+# Golang Tech Share
 
 ## Wed Feb 27 2019
 `DNS Configuration` [DNS Param](https://github.com/onlyLeoll/Document/tree/master/DNS)
