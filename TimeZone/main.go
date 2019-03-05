@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+//go version go1.12 darwin/amd64
+
 func main() {
 	test1()
 	test2()
