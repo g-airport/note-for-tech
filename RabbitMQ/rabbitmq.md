@@ -9,3 +9,19 @@ Headers exchanges can be looked upon as "direct exchanges on steroids". Because 
 &emsp;&emsp;Default Exchange
 
 ...
+
+#### rabbitmqdmin
+
+```bash
+rabbitmqadmin declare binding --vhost=Host_NAME \
+              source=Name_Exchange \
+              destination_type=queue \
+              destination=Name_Queue \
+              routing_key="#"
+              
+
+rabbitmqadmin declare exchange --vhost=Host_NAME \
+              name=Name_Exchange \
+              type=topic \
+              durable=true
+```
