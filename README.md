@@ -12,6 +12,7 @@
 | --- | --- | --- |
 |`Nginx Base`|NGINX配置基础详解| [Base && Optimism](https://github.com/g-airport/note-for-tech/blob/master/Nginx/readme.md)|
 |`Nats`|Nats IO 配置详解| [config.yml](https://github.com/g-airport/note-for-tech/blob/master/Nats/config.yaml)|
+|`TimeZone`|关于Golang时区配置详解|[TimeConfig](https://github.com/g-airport/note-for-tech/blob/master/TimeZone/time.md)
 
 ## Wed Feb 27 2019
 | 标题 |描述 | 链接 |
