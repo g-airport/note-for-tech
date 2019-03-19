@@ -9,9 +9,9 @@
 
 ### 准备工作
 
-[创建 comment 表]() \
-[删除 comment 表]() \
-[插入 测试数据 & 添加 父节点索引]()
+[创建 comment 表](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/0000_comment_up.sql) \
+[删除 comment 表](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/0001_comment_down.sql) \
+[插入 测试数据 & 添加 父节点索引](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/0002_init_comment.sql)
 
 ```
             |---->LETTER---->letter(list)
