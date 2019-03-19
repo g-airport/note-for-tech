@@ -1,5 +1,11 @@
 # Golang Tech Note
 
+## Tue May 19 2019
+| 标题 |描述 | 链接 |
+| --- | --- | --- |
+|`mysqlRecursionQuery`|使用MySQL数据库递归查询返回树状数据|[mysqlRecursionQuery](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/readme.md)|
+
+
 ## Wed May 13 2019
 | 标题 |描述 | 链接 |
 | --- | --- | --- |
