@@ -1,4 +1,10 @@
-# Golang 垃圾回收
+# 垃圾回收
+
+## 常用
+
+- 引用计数(reference counting)
+- 标记-清扫(mark&sweep)
+- 复制收集(Copy&Collection)
 
 ## 策略
 
