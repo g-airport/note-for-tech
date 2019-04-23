@@ -1,15 +1,22 @@
 # Golang Tech Note
 
+## Tue April 23 2019
+| 标题 |描述 | 链接 |
+| --- | --- | --- |
+|`Detail Golang GC`|GO GC 算法演变|[Golang GC](https://github.com/g-airport/note-for-tech/blob/master/gc%20golang/GC.md)
+
+
+
 ## Tue May 19 2019
 | 标题 |描述 | 链接 |
 | --- | --- | --- |
-|`mysqlRecursionQuery`|使用MySQL数据库递归查询返回树状数据|[mysqlRecursionQuery](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/readme.md)|
+|`MysqlRecursionQuery`|使用MySQL数据库递归查询返回树状数据|[MysqlRecursionQuery](https://github.com/g-airport/note-for-tech/blob/master/mysqlRecursionQuery/readme.md)|
 
 
 ## Wed May 13 2019
 | 标题 |描述 | 链接 |
 | --- | --- | --- |
-| `System IO` | 关于操作系统IO性能数据 | [IO Performance Data](https://github.com/g-airport/note-for-tech/tree/master/IO) |
+|`System IO` | 关于操作系统IO性能数据 | [IO Performance Data](https://github.com/g-airport/note-for-tech/tree/master/IO) |
 |`Swagger GO`|搭建Swagger API|[Swagger](https://github.com/g-airport/note-for-tech/blob/master/ReverseProxy/main.go)|
 |`AWS Lambda Deploy`|基于go部署AWS Lambda|[Lambda base on Golang](https://github.com/g-airport/note-for-tech/blob/master/Golang%20AWS%20Lambda/readme.md)|
 
