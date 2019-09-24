@@ -2,6 +2,16 @@
 
 #### 二进制文件
 
+
+```bash
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+    CGO_ENABLED=0 GOOS=linux GOARCH=386 go build
+    CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
+    CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build
+    # cmd/dist/test.go
+    CGO_ENABLED=0 go build -a -ldflags '-extldflags "-static"' .
+```
+
 ```
 go build -o (catagory + binary file name) ./main.go
 
