@@ -32,8 +32,21 @@
         EOF
         
         yum install neo4j
+        
+        neo4j-admin set-initial-password neo4jneo4j
+        
+#### Geoip2
+        
+        https://dev.maxmind.com/geoip/geoip2/downloadable/        
 
+#### Neo4j Tool
 
+        Driver : https://github.com/johnnadratowski/golang-neo4j-bolt-driver
+        
+        Tool : neo4j-admin help
+        
+        
+        
 
 ### Control
 
