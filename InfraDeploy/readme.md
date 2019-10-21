@@ -34,6 +34,12 @@
         yum install neo4j
         
         neo4j-admin set-initial-password neo4jneo4j
+
+        neo4j -h
+
+        tail -f /var/log/neo4j/neo4j.log
+        
+        vim /etc/neo4j/neo4j.conf
         
 #### Geoip2
         
