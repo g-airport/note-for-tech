@@ -41,6 +41,10 @@
         
         vim /etc/neo4j/neo4j.conf
         
+        dbms.security.auth_enabled=false
+        
+        [Status Code](https://neo4j.com/docs/status-codes/current/)
+        
 #### Geoip2
         
         https://dev.maxmind.com/geoip/geoip2/downloadable/        
